@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.shangui.shangui.activity.RegisterActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_color">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/register_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TitleTheme"
+            android:text="@string/title_register"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical">
+        
+        <LinearLayout
+            android:id="@+id/register_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="15dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_send_code"
+                style="@style/TextBlack"/>
+
+            <TextView
+                android:id="@+id/register_text_phone_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextBlack"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="25dp">
+
+            <TextView
+                android:id="@+id/register_text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextBlack"
+                android:layout_marginTop="15dp"
+                android:text="@string/text_name"/>
+
+            <EditText
+                android:id="@+id/register_edit_name"
+                android:labelFor="@id/register_edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/register_text_name"
+                android:inputType="text"
+                style="@style/TextBlack"
+                android:maxLines="1"
+                android:layout_alignBaseline="@id/register_text_name"
+                android:background="@drawable/edit_gary"/>
+
+            <TextView
+                android:id="@+id/register_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextBlack"
+                android:text="@string/text_id"
+                android:layout_marginTop="35dp"
+                android:layout_below="@id/register_text_name"/>
+
+            <RelativeLayout
+                android:id="@+id/register_id_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/register_edit_name"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/register_text_id">
+
+                <EditText
+                    android:id="@+id/register_edit_id"
+                    android:labelFor="@id/register_edit_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    style="@style/TextBlack"
+                    android:maxLines="1"
+                    android:background="@drawable/edit_gary"/>
+
+                <CheckBox
+                    android:id="@+id/register_password_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/PasswordIcon"
+                    android:layout_marginEnd="10dp"
+                    android:layout_alignBaseline="@id/register_edit_id"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/register_password_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_password_tip"
+                    android:textSize="12sp"
+                    android:layout_below="@id/register_edit_id"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorTitleRightBlue"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/register_text_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextBlack"
+                android:text="@string/text_phone_num"
+                android:layout_marginTop="30dp"
+                android:layout_below="@id/register_id_layout"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/register_text_phone"
+                android:layout_toEndOf="@id/register_text_phone">
+
+                <EditText
+                    android:id="@+id/register_edit_phone"
+                    android:labelFor="@id/register_edit_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    style="@style/TextBlack"
+                    android:maxLines="1"
+                    android:background="@drawable/edit_gary"/>
+
+                <CheckBox
+                    android:id="@+id/register_confirm_password_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/PasswordIcon"
+                    android:layout_alignEnd="@id/register_edit_phone"
+                    android:layout_marginEnd="10dp"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/register_btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/register_text_phone"
+                android:layout_marginTop="40dp"
+                android:text="@string/text_next"
+                style="@style/TitleTheme"
+                android:background="@drawable/btn_blue"/>
+
+            <TextView
+                android:id="@+id/register_btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_fast_login"
+                android:layout_below="@id/register_btn_next"
+                style="@style/TextBlack"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="18dp"/>
+
+            <TextView
+                android:id="@+id/register_btn_forget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_forget_password"
+                android:layout_below="@id/register_btn_next"
+                style="@style/TextBlack"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="18dp"
+                android:layout_alignParentEnd="true"/>
+
+            <CheckBox
+                android:id="@+id/register_check_protocol"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="30dp"
+                android:button="@null"
+                android:background="@drawable/bg_check"
+                android:layout_below="@id/register_btn_login"/>
+
+            <TextView
+                android:id="@+id/register_text_protocol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/register_check_protocol"
+                android:text="@string/text_protocol1"
+                android:layout_toEndOf="@id/register_check_protocol"
+                style="@style/TextBlack"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/load_view"/>
+
+</android.support.design.widget.CoordinatorLayout>

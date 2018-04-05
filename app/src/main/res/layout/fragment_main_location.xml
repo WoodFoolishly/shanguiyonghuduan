@@ -1,0 +1,70 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.shangui.shangui.fragment.MainLocationFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_color">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/main_location_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+
+        <EditText
+            android:id="@+id/main_fragment_search"
+            android:labelFor="@id/convey_address_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:inputType="text"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            style="@style/TextBlack"
+            android:textSize="15sp"
+            android:hint="@string/text_search_box"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="@drawable/edit_search"/>
+
+        <ImageView
+            android:id="@+id/main_fragment_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:src="@drawable/meun"
+            android:layout_marginStart="20dp"/>
+
+        <ImageView
+            android:id="@+id/main_fragment_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:src="@drawable/scan"
+            android:layout_marginEnd="20dp"/>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/main_fragment_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <include layout="@layout/item_location_map"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

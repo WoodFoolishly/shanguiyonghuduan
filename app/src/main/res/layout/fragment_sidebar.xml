@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:id="@+id/sidebar_layout"
+    tools:context="com.example.shangui.shangui.fragment.SidebarFragment">
+
+    <TextView
+        android:id="@+id/sidebar_my"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_my"
+        style="@style/TitleTheme"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/colorTextBlack"/>
+
+    <TextView
+        android:id="@+id/sidebar_due_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_due_in"
+        style="@style/TitleTheme"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/colorTextBlack"/>
+
+    <TextView
+        android:id="@+id/sidebar_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_record"
+        style="@style/TitleTheme"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/colorTextBlack"/>
+
+</LinearLayout>

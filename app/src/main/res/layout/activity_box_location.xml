@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.shangui.shangui.activity.BoxLocationActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_color">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/box_location_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:titleTextAppearance="@style/TitleTheme"/>
+
+        <TextView
+            android:id="@+id/box_location_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="15dp"
+            style="@style/TitleTheme"/>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/head2"/>
+
+        <Button
+            android:id="@+id/box_location_btn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/btn_rectangle_blue"
+            style="@style/TextBlack"
+            android:text="@string/text_map_btn"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="33dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignTop="@id/box_location_btn"
+            android:layout_marginStart="15dp"
+            android:layout_toStartOf="@id/box_location_btn"
+            android:layout_marginEnd="10dp">
+
+            <TextView
+                android:id="@+id/box_location_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextBlack"/>
+
+            <TextView
+                android:id="@+id/box_location_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextBlack"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.shangui.shangui.activity.DeliverActivity">
+
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorBgGray"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextBlack"
+                android:text="@string/text_recipients"/>
+
+            <EditText
+                android:id="@+id/deliver_recipients"
+                android:labelFor="@id/deliver_recipients"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextBlack"
+                android:layout_marginStart="25dp"
+                android:background="@drawable/edit_white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextBlack"
+                android:text="@string/text_phone"/>
+
+            <EditText
+                android:id="@+id/deliver_phone"
+                android:labelFor="@id/deliver_phone"
+                android:inputType="phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextBlack"
+                android:layout_marginStart="25dp"
+                android:background="@drawable/edit_white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp">
+
+            <Button
+                android:id="@+id/deliver_friend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_rectangle_blue"
+                android:text="@string/text_friend"
+                android:textColor="@color/colorWhite"
+                style="@style/TextBlack"
+                android:gravity="center"
+                android:drawableStart="@drawable/invite"
+                android:paddingStart="30dp"
+                android:paddingEnd="10dp"
+                android:layout_marginEnd="13dp"/>
+
+            <Button
+                android:id="@+id/deliver_address_list"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_rectangle_blue"
+                android:text="@string/text_address_list"
+                android:textColor="@color/colorWhite"
+                style="@style/TextBlack"
+                android:gravity="center"
+                android:drawableStart="@drawable/mail"
+                android:paddingStart="30dp"
+                android:paddingEnd="10dp"
+                android:layout_marginStart="13dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="center_vertical"
+            android:baselineAligned="false">
+            
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    style="@style/TextBlack"
+                    android:text="@string/text_advance"/>
+                
+                <EditText
+                    android:id="@+id/deliver_edit_advance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_white"
+                    style="@style/TextBlack"
+                    android:hint="@string/text_zero"
+                    android:gravity="center"/>
+                
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/TextBlack"
+                    android:gravity="center"
+                    android:text="@string/text_unit"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_expenditure"
+                        android:textColor="@color/colorTitleRightBlue"/>
+
+                    <TextView
+                        android:id="@+id/deliver_consume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorTitleRightBlue"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_advance"
+                        android:textColor="@color/colorTitleRightBlue"/>
+
+                    <TextView
+                        android:id="@+id/deliver_advance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorTitleRightBlue"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_gravity="top">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/text_message"
+                style="@style/TextBlack"/>
+
+            <EditText
+                android:id="@+id/deliver_message"
+                android:labelFor="@id/deliver_message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/edit_white"
+                style="@style/TextBlack"
+                android:lines="2"
+                android:inputType="textMultiLine"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/deliver_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/text_countersign"
+            style="@style/TextBlack"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:background="@drawable/btn_blue"/>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

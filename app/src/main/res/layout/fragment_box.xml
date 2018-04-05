@@ -1,0 +1,79 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.shangui.shangui.fragment.BoxFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:id="@+id/box_sidebar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@drawable/sidebar_bg">
+
+            <RadioGroup
+                android:id="@+id/box_sidebar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/sidebar_my"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_my"
+                    android:button="@null"
+                    style="@style/TitleTheme"
+                    android:layout_marginTop="100dp"
+                    android:checked="true"
+                    android:textColor="@drawable/radio_text_color"/>
+
+                <RadioButton
+                    android:id="@+id/sidebar_due_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_due_in"
+                    style="@style/TitleTheme"
+                    android:button="@null"
+                    android:layout_marginTop="100dp"
+                    android:textColor="@drawable/radio_text_color"/>
+
+                <RadioButton
+                    android:id="@+id/sidebar_record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_record"
+                    style="@style/TitleTheme"
+                    android:button="@null"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginBottom="100dp"
+                    android:textColor="@drawable/radio_text_color"/>
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:id="@+id/box_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

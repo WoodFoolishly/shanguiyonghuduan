@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.shangui.shangui.activity.LoginActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_color">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TitleTheme"
+            android:text="@string/title_login"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:id="@+id/login_text_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextBlack"
+                android:text="@string/text_phone"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/login_edit_phone"
+                android:labelFor="@id/login_edit_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/login_text_phone"
+                android:inputType="phone"
+                style="@style/TextBlack"
+                android:maxLines="1"
+                android:layout_alignBaseline="@id/login_text_phone"
+                android:background="@drawable/edit_gary"/>
+
+            <TextView
+                android:id="@+id/login_text_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextBlack"
+                android:layout_below="@id/login_text_phone"
+                android:layout_marginTop="30dp"
+                android:text="@string/text_password"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/login_text_password"
+                android:layout_alignStart="@id/login_edit_phone">
+
+                <EditText
+                    android:id="@+id/login_edit_password"
+                    android:labelFor="@id/login_edit_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    style="@style/TextBlack"
+                    android:maxLines="1"
+                    android:background="@drawable/edit_gray_password"/>
+
+                <CheckBox
+                    android:id="@+id/login_password_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/PasswordIcon"
+                    android:layout_alignEnd="@id/login_edit_password"
+                    android:layout_marginEnd="10dp"
+                    android:layout_centerVertical="true" />
+
+            </RelativeLayout>
+
+            <CheckBox
+                android:id="@+id/login_save_password"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="10dp"
+                android:button="@null"
+                android:background="@drawable/bg_check"
+                android:layout_below="@id/login_text_password"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/login_save_password"
+                android:text="@string/text_save_password"
+                android:layout_toEndOf="@id/login_save_password"
+                android:layout_marginStart="10dp"
+                style="@style/TextBlack"/>
+            
+            <Button
+                android:id="@+id/login_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/login_save_password"
+                android:layout_marginTop="30dp"
+                android:text="@string/title_login"
+                style="@style/TitleTheme"
+                android:background="@drawable/btn_blue"/>
+
+            <TextView
+                android:id="@+id/login_btn_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_fast_register"
+                android:layout_below="@id/login_btn"
+                style="@style/TextBlack"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="18dp"/>
+
+            <TextView
+                android:id="@+id/login_btn_forget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_forget_password"
+                android:layout_below="@id/login_btn"
+                style="@style/TextBlack"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="18dp"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/load_view"/>
+
+</android.support.design.widget.CoordinatorLayout>

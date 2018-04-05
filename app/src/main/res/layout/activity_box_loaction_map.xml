@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.example.shangui.shangui.activity.BoxLocationMapActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_color">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/box_location_map_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+
+        <!--<EditText-->
+            <!--android:id="@+id/box_location_map_search"-->
+            <!--android:labelFor="@id/box_location_map_search"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginStart="80dp"-->
+            <!--android:layout_marginEnd="80dp"-->
+            <!--android:inputType="text"-->
+            <!--android:drawableStart="@drawable/search_1"-->
+            <!--android:drawablePadding="5dp"-->
+            <!--android:paddingStart="15dp"-->
+            <!--android:paddingEnd="15dp"-->
+            <!--style="@style/TextBlack"-->
+            <!--android:textSize="13sp"-->
+            <!--android:hint="@string/text_search_box"-->
+            <!--android:paddingTop="5dp"-->
+            <!--android:paddingBottom="5dp"-->
+            <!--android:background="@drawable/edit_search"/>-->
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/box_location_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <TextView
+            android:id="@+id/box_location_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#50000000"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            style="@style/TitleTheme"/>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,69 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.shangui.shangui.fragment.ChatScreenFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/title_color">
+
+            <android.support.v7.widget.Toolbar
+
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/return_im"
+                    style="@style/TitleTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/icon_arrow_left" />
+
+                <TextView
+                    style="@style/TitleTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="我的好友"
+                    tools:ignore="HardcodedText" />
+
+                <ImageView
+                    android:id="@+id/addbuddy_im"
+                    style="@style/TitleTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/add" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/frag_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabSelectedTextColor="@color/colorTitleLeftBlue"
+            app:tabTextAppearance="@style/TabLayoutTextSizeStyle" />
+
+        <com.example.shangui.shangui.view.MainViewPager
+            android:id="@+id/frag_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</FrameLayout>
